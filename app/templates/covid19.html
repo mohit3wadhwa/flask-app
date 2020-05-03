@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}My Apps{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <h3><pre>CHECK COUNTRY-WISE COVID-19 STATUS</pre></h3>
+</div>
+{{ wtf.quick_form(form) }}
+<br>
+
+<div>
+    <p> Country Name      : {{ Country1 }}</p>
+    <p> Total Corona Cases: {{ TotalConfirmed }}</p>
+    <p> Total Deaths      : {{ TotalDeaths }}</p>
+    <p> Total Recovered   : {{ TotalRecovered }}</p>
+</div>
+
+<div class="container">
+    <br>
+    <a href="/apps" class="btn btn-primary btn-block" role="button">Back to Applications</a>
+    <br>
+    <br>
+</div>
+
+{% endblock %}

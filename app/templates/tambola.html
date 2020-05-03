@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Tambola{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    {% if cut_num == 'Start' %}
+        {% if not cut_list %}
+            <h1> Click Button to Play </h1>
+        {% else %}
+            <h1> {{ cut_list[-1] }}</h1>
+            <p>{{ cut_list|join(', ') }}</p>
+        {% endif %}
+        
+    {% else %}
+        <h1>{{cut_num }}</h1>
+        <p>{{ cut_list|join(', ') }}</p>
+    {% endif %}
+</div>
+
+<div class="container">
+    {{ wtf.quick_form(form) }}
+    <br>
+</div>
+
+<table class="table">
+    <thead>
+    </thead>
+    <tbody>
+        {% for number in numbers %}
+
+        <tr>
+            <td>{{ number[0] }}</td>
+            <td>{{ number[1] }}</td>
+            <td>{{ number[2] }}</td>
+            <td>{{ number[3] }}</td>
+            <td>{{ number[4] }}</td>
+            <td>{{ number[5] }}</td>
+            <td>{{ number[6] }}</td>
+            <td>{{ number[7] }}</td>
+            <td>{{ number[8] }}</td>
+            <td>{{ number[9] }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="container">
+    <br>
+    <a href="/apps" class="btn btn-primary btn-block" role="button">Back to Applications</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+
+{% endblock %}
+
+
+<!-- <tr>
+    <th>Column1</th>
+    <th>Column2</th>
+    <th>Column3</th>
+    <th>Column4</th>
+    <th>Column5</th>
+    <th>Column6</th>
+    <th>Column7</th>
+    <th>Column8</th>
+    <th>Column9</th>
+    <th>Column10</th>
+
+            <td>{{ number.col1 }}</td>
+            <td>{{ number.col2 }}</td>
+            <td>{{ number.col3 }}</td>
+            <td>{{ number.col4 }}</td>
+            <td>{{ number.col5 }}</td>
+            <td>{{ number.col6 }}</td>
+            <td>{{ number.col7 }}</td>
+            <td>{{ number.col8 }}</td>
+            <td>{{ number.col9 }}</td>
+            <td>{{ number.col10 }}</td>
+<tr> -->

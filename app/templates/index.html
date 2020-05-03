@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block page_content %}
+
+<div class="page-header"> 
+  <p class="text-muted">Everyone likes <kbd>free</kbd>; so is some advice! - </p>
+  <h3 class="text-success"> "{{ advice }}" </h3>
+</div>
+
+
+<div class="container">
+  <img src="{{url_for('static', filename='Mohit.JPG')}}" class="img-responsive" alt="Photo is Missing here"  style="width:100%" height="500"> 
+</div>
+
+  <div class="text-center">
+    <br>
+    <br>
+    <br>
+    <div class="btn-group btn-group-justified" role="group">
+      <a href="https://www.linkedin.com/in/mohit-wadhwa-25a88a18/"><img src="{{url_for('static', filename='linkedin1.JPG')}}" alt="linkedin" style="width:50" height=50></a>
+      <a href="https://github.com/mohit3wadhwa"><img src="{{url_for('static', filename='github3.JPG')}}" alt="github" style="width:50" height=50></a>
+      <a href="https://www.facebook.com/mohit3wadhwa"><img src="{{url_for('static', filename='facebook1.JPG')}}" alt="facebook" style="width:53" height="53"></a>
+      <a href="https://www.twitter.com/wadhwa3mohit?s=09"><img src="{{url_for('static', filename='twitter1.JPG')}}" alt="twitter" style="width:50" height=50></a>
+      <a href="https://www.youtube.com/channel/UChBFRfaHi6F16FBjA2bnC3A?view_as=subscriber"><img src="{{url_for('static', filename='youtube1.JPG')}}" alt="github" style="width:50" height="50"></a>
+    </div>
+  </div>
+  <br>
+{% endblock %}
