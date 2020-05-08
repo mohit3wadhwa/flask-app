@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from config import config
 from wtforms import StringField, SubmitField
 from wtforms.validators import Required
+from flask_wtf import RecaptchaField
 import os
 
 
@@ -20,6 +21,9 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # app.config['RECAPTCHA_PUBLIC_KEY'] = RC_PUBLIC_KEY
+    # app.config['RECAPTCHA_PRIVATE_KEY'] = RC_PRIVATE_KEY
+
 
     # app = Flask(__name__, instance_relative_config=True)
     # app.config.from_mapping(
@@ -40,25 +44,11 @@ def create_app(config_name):
     with app.app_context():
         db.create_all()
 
-    # a simple page that says hello
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-
-    # from . import db
-    # db.init_app(app)
-
-    # from . import auth
-    # app.register_blueprint(auth.bp)
-
-    # from . import blog
-    # app.register_blueprint(blog.bp)
-    # app.add_url_rule('/', endpoint='index')
-
-    # from .auth import auth as auth_blueprint
-    # app.register_blueprint(auth_blueprint, url_prefix='/auth')
-    
-    # attach routes and custom error pages here
+    from .main.applications import applications as applications_blueprint
+    app.register_blueprint(applications_blueprint)
     
     return app

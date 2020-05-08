@@ -5,6 +5,7 @@ from wtforms.validators import DataRequired, Length, Email, Regexp
 from wtforms import ValidationError
 #from flask_pagedown.fields import PageDownField
 from ..models import User
+from flask_wtf import RecaptchaField
 
 
 class NameFormLogin(FlaskForm):
@@ -14,12 +15,16 @@ class NameFormLogin(FlaskForm):
     
 
 class NameFormSignUp(FlaskForm):
+    # captcha = ReCaptchaField()
     username = StringField('Username', validators=[DataRequired(), Length(0, 64)])
     email = StringField('Email address', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired(), Length(5, 25, 'Password is too Short')])
     phone = StringField('Phone Number', validators=[DataRequired(), Length(10),
                                 Regexp('^[0-9]', 0,
                'Phone Number must have only numbers')])
+    recaptcha = RecaptchaField()
+    # if getattr(settings, 'DEBUG', False):
+    #     recaptcha.clean = lambda x: x[0]
     submit = SubmitField('Submit')
 
 
@@ -32,3 +37,7 @@ class NameFormDice(FlaskForm):
     
 class NameFormTambola(FlaskForm):
     submit = SubmitField('Trigger a Number')
+
+class NameFormZones(FlaskForm):
+    states = SelectField('Select State', validators=[DataRequired()], option_widget=None)
+    submit = SubmitField('Submit')

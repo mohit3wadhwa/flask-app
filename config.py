@@ -2,8 +2,9 @@ import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
-    #SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     SECRET_KEY = '12355b2kl5bv123b5qwklefgbwklgb kqwbtykl'
+    RECAPTCHA_PUBLIC_KEY = '6LfFhPQUAAAAAN8r8-Sh9nQ0WicuV_vcadHQafSe'
+    RECAPTCHA_PRIVATE_KEY = '6LfFhPQUAAAAANbfHERIcOOAUCAyhteGY3PnVge6'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
@@ -15,7 +16,7 @@ class Config:
         pass
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    DEBUG = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
@@ -29,8 +30,8 @@ class ProductionConfig(Config):
     'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 
 config = {
+    'production': ProductionConfig,
     'development': DevelopmentConfig,
     'testing': TestingConfig,
-    'production': ProductionConfig,
     'default': DevelopmentConfig
 }

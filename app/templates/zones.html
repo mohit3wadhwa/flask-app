@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}District-Wise Corona Status{% endblock %}
+{% block page_content %}
+
+<div class="page-header">
+    <h3><pre>DISTRICT-WISE COVID-19 STATUS</pre></h3>
+</div>
+{{ wtf.quick_form(form) }}
+<br>
+
+<div class="container">
+    {% if image_name %}
+        <img src="{{url_for('static', filename=image_name)}}" class="img-responsive" alt="Graph"  width="800" height="600">
+    {% endif %}
+</div>
+
+<div class="container">
+    <br>
+    <a href="/apps" class="btn btn-primary btn-block" role="button">Back to Applications</a>
+    <br>
+    <br>
+</div>
+
+
+{% endblock %}

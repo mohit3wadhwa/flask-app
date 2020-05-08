@@ -5,7 +5,7 @@
 <div class="page-header">
     {% if cut_num == 'Start' %}
         {% if not cut_list %}
-            <h1> Click Button to Play </h1>
+            <h3>&darr;Click to Play&darr;</h3>
         {% else %}
             <h1> {{ cut_list[-1] }}</h1>
             <p>{{ cut_list|join(', ') }}</p>
@@ -49,12 +49,7 @@
     <br>
     <a href="/apps" class="btn btn-primary btn-block" role="button">Back to Applications</a>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
 </div>
-
 {% endblock %}
 
 

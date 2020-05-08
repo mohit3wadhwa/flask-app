@@ -28,7 +28,7 @@ html {
   nav {
     background: lightgray;
     display: flex;
-    align-items: center;
+    align-items: right;
     padding: 0 0.5rem;
   }
   

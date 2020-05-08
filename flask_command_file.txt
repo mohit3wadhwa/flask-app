@@ -1,0 +1,15 @@
+set FLASK_APP=flaskr
+
+set FLASK_ENV=development
+export FLASK_ENV=development
+
+flask run
+python manage.py runserver --host 0.0.0.0
+export DEBUG = FALSE
+flask db-init
+
+export FLASK_APP=/home/mohit3wadhwa/mysite/__init__.py
+
+export FLASK_APP=/Users/mohitwadhwa/Desktop/Techy/flaskapp/app/__init__.py
+
+https://api.covid19india.org/zones.json
