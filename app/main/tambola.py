@@ -23,7 +23,7 @@ def tambola_logic():
     listx.remove(tambola_num)
     return tambola_num
 
-@applications.route('/tambola', methods=['GET', 'POST'])
+@main.route('/tambola', methods=['GET', 'POST'])
 def tambola():
     global listx, cut_num_list, list1
     session_var = check_session()
