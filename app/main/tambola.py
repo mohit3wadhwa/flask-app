@@ -33,7 +33,7 @@ def tambola_logic():
     #session['listx_s'] = listx_s
     return tambola_num
 
-@applications.route('/tambola', methods=['GET', 'POST'])
+@main.route('/tambola', methods=['GET', 'POST'])
 def tambola():
     #global listx, cut_num_list, list1
     user_name = check_user_session()
