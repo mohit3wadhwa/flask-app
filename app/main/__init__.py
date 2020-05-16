@@ -2,7 +2,7 @@ from flask import Blueprint
 
 main = Blueprint('main', __name__)
 
-from . import home, login, errors, signup
+from . import home, login, errors, signup, tambola
 from ..models import Permission
 
 # from .apps import apps as apps_blueprint
