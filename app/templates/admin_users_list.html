@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block page_content %}
+
+
+<!-- <div class="container">
+    <a href="/covid19-app" class="btn btn-primary btn-lg btn-block" role="button">Covid-19 Tracker</a>
+    <br>
+    <a href="/dice" class="btn btn-success btn-lg btn-block" role="button">Roll a Dice!</a>
+    <br>
+    <a href="/tambola" class="btn btn-primary btn-lg btn-block" role="button">Play Tambola</a>
+    <br>
+    <a href="/states" class="btn btn-success btn-lg btn-block" role="button">Zone-wise Covid-19 Status</a>
+    <br>
+    <a href="#" class="btn btn-primary btn-lg btn-block" role="button">Application 5</a>
+    <br>
+    <a href="#" class="btn btn-success btn-lg btn-block" role="button">Application 6</a>
+    <br>
+    <a href="#" class="btn btn-primary btn-lg btn-block" role="button">Application 7</a>
+    <br>
+</div> -->
+<div>
+    <h3>List of registered users</h3> 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for key, value in user_info.items() %}
+        <tr>
+            <td>{{ key }} </td>
+            
+            <td>{{  value.split(",")[0] | lower }}</td>
+            <td>{{  value.split(",")[1] | lower }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+
+
+{% endblock %}

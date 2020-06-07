@@ -1,18 +1,18 @@
 {% extends "bootstrap/base.html" %}
 {% block title %}Savage-Indian{% endblock %}
 
+
 {% block head %}
 {{ super() }}
 <link rel="shortcut icon" href="{{ url_for('static', filename = 'India.ico') }}"
   type="image/x-icon">
 <link rel="icon" href="{{ url_for('static', filename = 'India.ico') }}"
   type="image/x-icon">
-
-
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 {% endblock %}
 
-{% block navbar %}
 
+{% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
   <div class="container">
    <div class="navbar-header">
@@ -24,17 +24,19 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/"><pre><b>S A V A G E  -  I N D I A N</b></pre></a>
+      <!-- <a class="navbar-brand" href="/">
+        <img src="{{url_for('static', filename='/images/hitu_logo_2.png')}}" alt="S A V A G E  -  I N D I A N"> -->
     </div>
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav">
         {% if not session['name'] %}
           <li><a href="/">HOME</a></li>
-          <li><a href="/apps">APPS</a></li>
+          <li><a href="/apps">COOL APPS</a></li>
           <li><a href="/login">LOGIN</a></li>
           <li><a href="/signup">SIGN UP</a></li>
         {% else %}
           <li><a href="/">HOME</a></li>
-          <li><a href="/apps">APPS</a></li>
+          <li><a href="/apps">COOL APPS</a></li>
           <li><a href="#"> {{ user_profile|upper }}</a></li>
           <li><a href="/signout">SIGN OUT</a></li>
         {% endif %}
@@ -43,6 +45,8 @@
   </div>
 </div>
 {% endblock %}
+
+
 {% block content %}
 <div class="container">
   {% for message in get_flashed_messages() %}
@@ -51,12 +55,40 @@
     {{ message }}
   </div>
   {% endfor %}
-  
   {% block page_content %}{% endblock %}
-
 </div>
 
+{% block footer %}
+<div class="footer">
+  <br>
+  <div class="text-center" >
+    <p><b>Copyright &copy; M O H I T &nbsp; W A D H W A</b></p>
+    <div class="btn-group btn-group-justified" role="group">
+      <a href="https://www.linkedin.com/in/mohit-wadhwa-25a88a18/">
+        <img src="{{url_for('static', filename='/images/Social-Networks-Linkedin-icon.png')}}" alt="linkedin">
+      </a>
+      &nbsp;
+      <a href="https://github.com/mohit3wadhwa">
+        <img src="{{url_for('static', filename='/images/Programming-Github-icon.png')}}" alt="github">
+      </a>
+      &nbsp;
+      <a href="https://www.facebook.com/mohit3wadhwa">
+        <img src="{{url_for('static', filename='/images/Social-Networks-Facebook-icon.png')}}" alt="facebook">
+      </a>
+      &nbsp;
+      <a href="https://www.twitter.com/wadhwa3mohit?s=09">
+        <img src="{{url_for('static', filename='/images/Social-Networks-Twitter-icon.png')}}" alt="twitter">
+      </a>
+      &nbsp;
+      <a href="https://www.youtube.com/channel/UChBFRfaHi6F16FBjA2bnC3A?view_as=subscriber">
+        <img src="{{url_for('static', filename='/images/Social-Networks-Youtube-icon.png')}}" alt="youtube">
+      </a>
+    </div>
+  </div>
+<br>
 {% endblock %}
+{% endblock %}
+
 
 {% block scripts %}
 {{ super() }}
@@ -64,30 +96,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-<div id="footer">
-  {% block footer %}
-  <br>
-  <div class="text-center">
-    <p>Copyright &copy; M O H I T   W A D H W A</p>
-    <div class="btn-group btn-group-justified" role="group">
-      <a href="https://www.linkedin.com/in/mohit-wadhwa-25a88a18/">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Linkedin-icon.png')}}" alt="linkedin">
-      </a>
-      <a href="https://github.com/mohit3wadhwa">
-        <img src="{{url_for('static', filename='/images/Programming-Github-icon.png')}}" alt="github">
-      </a>
-      <a href="https://www.facebook.com/mohit3wadhwa">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Facebook-icon.png')}}" alt="facebook">
-      </a>
-      <a href="https://www.twitter.com/wadhwa3mohit?s=09">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Twitter-icon.png')}}" alt="twitter">
-      </a>
-      <a href="https://www.youtube.com/channel/UChBFRfaHi6F16FBjA2bnC3A?view_as=subscriber">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Youtube-icon.png')}}" alt="youtube">
-      </a>
-    </div>
-  </div>
-  {% endblock %}
-
 {% endblock %}

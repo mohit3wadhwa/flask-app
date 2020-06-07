@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-{% block title %}Tambola{% endblock %}
 {% block page_content %}
 <div class="page-header">
     {% if cut_num == 'Start' %}
@@ -45,11 +44,12 @@
     </tbody>
 </table>
 
-<div class="container">
-    <br>
-    <a href="/apps" class="btn btn-primary btn-block" role="button">Back to Applications</a>
-    <br>
+<div class="container">              
+    <ul class="pager">
+      <li class="previous"><a href="/apps">&#8610; Go Back</a></li>
+    </ul>
 </div>
+<br>
 {% endblock %}
 
 

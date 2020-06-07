@@ -1,0 +1,24 @@
+body{
+  background-image: url("images/yellow.JPG");
+  background-color: #cccccc;
+  /* height: 800px; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 800px;
+}
+
+/* #login_div{ */
+  /* border: 1px solid rgb(0, 1, 65); */
+  /* margin-right: 5px; */
+  /* padding: 10px;
+  background-color: rgb(196, 161, 230);
+  background-image: linear-gradient(to right, rgb(193, 195, 223) , rgb(163, 122, 172));
+  box-shadow: 10px 10px 5px grey; */
+/* } */
+
+#h4_login{
+  /* color: white; */
+  text-shadow: 0 0 3px rgb(138, 126, 248);  
+}

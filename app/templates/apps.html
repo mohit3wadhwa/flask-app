@@ -1,10 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Applications{% endblock %}
 {% block page_content %}
-<div class="page-header">
-    <h3><pre>A   L I S T    O F   C O O L   A P P S</pre></h3>
-</div>
-    <div class="container">
+
+<!-- <div class="container-fluid">
+    <div class="row">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{url_for('static', filename='/images/6sided_dice.jpg')}}" alt="Dice" style="width: 30px;">
+        <div class="card-body">
+          <h4 class="card-title">Roll a dice!</h4>
+        </div>
+      </div>
+    </div>
+</div> -->
+
+<br>
+<div class="container">
         <a href="/covid19-app" class="btn btn-primary btn-lg btn-block" role="button">Covid-19 Tracker</a>
         <br>
         <a href="/dice" class="btn btn-success btn-lg btn-block" role="button">Roll a Dice!</a>

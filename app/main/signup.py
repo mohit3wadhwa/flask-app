@@ -5,6 +5,14 @@ from .forms import NameFormSignUp
 from .. import db
 from ..models import User
 from sqlalchemy import desc
+import requests
+import json
+import os
+
+def pust_to_slack(user_name):
+    web_hook_url = os.environ.get('WEB_HOOK_URL_SLACK')
+    slack_msg = {'text': user_name + ' has signed up!'}
+    requests.post(web_hook_url, data=json.dumps(slack_msg))
 
 
 @main.route('/signup', methods=['GET', 'POST'])
@@ -19,10 +27,12 @@ def signup():
             db.session.add(user)
             db.session.commit()
             flash('Sign-up is completed, you should log in now!')
+            pust_to_slack(form.username.data)
+
             form.username.data = ''
             form.phone.data = ''
             form.email.data = ''
-            return redirect(url_for('main.login'))
+            return redirect(url_for('main.index'))
         
         except AssertionError as exception_message:
             flash(exception_message)

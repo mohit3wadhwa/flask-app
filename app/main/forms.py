@@ -8,9 +8,17 @@ from ..models import User
 from flask_wtf import RecaptchaField
 
 
+class NameFormAdmin(FlaskForm):
+    username = StringField('Username', validators=[DataRequired(), Length(0, 64)])
+    password = PasswordField('Password', validators=[DataRequired(), Length(5, 25, 'Password is too Short')])
+    key = PasswordField('Key', validators=[DataRequired(), Length(5, 25, 'Password is too Short')])
+    submit = SubmitField('Submit')
+
+
 class NameFormLogin(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(0, 64)])
     password = PasswordField('Password', validators=[DataRequired(), Length(5, 25, 'Password is too Short')])
+    remember_me = BooleanField('Remember me')
     submit = SubmitField('Submit')
     
 

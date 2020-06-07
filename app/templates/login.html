@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-{% block title %}Login{% endblock %}
 {% block page_content %}
-<div class="page-header">
+<!-- <div class="page-header">
     <div class="container">
-        <h3>Hello, Please Login</h3>
+        <h3>Hello there, Please login here!</h3>
     </div>
-</div>
-{{ wtf.quick_form(form) }}
+</div> -->
+<br>
+{{ wtf.quick_form(form, button_map={'submit':'success'}) }}
 
 {% endblock %}
