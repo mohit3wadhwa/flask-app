@@ -1,10 +1,7 @@
 from flask import render_template, session, redirect, url_for, flash
 from ..forms import NameFormTambola
-from ... import db
-from ...models import User
 import random
 from . import applications
-
 
 def check_user_session():
     if 'name' in session:

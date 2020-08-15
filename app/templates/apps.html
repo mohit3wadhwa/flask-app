@@ -1,33 +1,69 @@
 {% extends "base.html" %}
 {% block page_content %}
 
-<!-- <div class="container-fluid">
+<div class="container">
     <div class="row">
-      <div class="card" style="width:400px">
-        <img class="card-img-top" src="{{url_for('static', filename='/images/6sided_dice.jpg')}}" alt="Dice" style="width: 30px;">
-        <div class="card-body">
-          <h4 class="card-title">Roll a dice!</h4>
-        </div>
+      <div class="col-xs-4" id="apps">
+        <a href="/covid19-app"" class="mdc-icon-button material-icons md-72">coronavirus</a>
+        <p>Covid Stat</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="/dice" class="mdc-icon-button material-icons md-72">casino</a>
+        <p>Roll a Dice</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="/tambola" class="mdc-icon-button material-icons md-72">games</a>
+        <p>Tambola</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="/states" class="mdc-icon-button material-icons md-72">bar_chart</a>
+        <p>Covid Zone</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="/bot" class="mdc-icon-button material-icons md-72">android</a>
+        <p>Bot</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
+      </div>
+      <div class="col-xs-4" id="apps">
+        <a href="#" class="mdc-icon-button material-icons md-72">device_unknown</a>
+        <p>Next App</p>
       </div>
     </div>
-</div> -->
-
-<br>
-<div class="container">
-        <a href="/covid19-app" class="btn btn-primary btn-lg btn-block" role="button">Covid-19 Tracker</a>
-        <br>
-        <a href="/dice" class="btn btn-success btn-lg btn-block" role="button">Roll a Dice!</a>
-        <br>
-        <a href="/tambola" class="btn btn-primary btn-lg btn-block" role="button">Play Tambola</a>
-        <br>
-        <a href="/states" class="btn btn-success btn-lg btn-block" role="button">Zone-wise Covid-19 Status</a>
-        <br>
-        <a href="#" class="btn btn-primary btn-lg btn-block" role="button">Application 5</a>
-        <br>
-        <a href="#" class="btn btn-success btn-lg btn-block" role="button">Application 6</a>
-        <br>
-        <a href="#" class="btn btn-primary btn-lg btn-block" role="button">Application 7</a>
-        <br>
-    </div>
+</div>
 
 {% endblock %}

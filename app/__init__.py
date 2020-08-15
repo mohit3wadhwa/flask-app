@@ -8,6 +8,9 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import Required
 from flask_wtf import RecaptchaField
 import os
+# from chatterbot import ChatBot
+# from chatterbot.trainers import ChatterBotCorpusTrainer
+# from chatterbot.trainers import ListTrainer
 
 
 bootstrap = Bootstrap()
@@ -43,7 +46,6 @@ def create_app(config_name):
     
     with app.app_context():
         db.create_all()
-
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)

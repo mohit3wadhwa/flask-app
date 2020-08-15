@@ -1,16 +1,155 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
 {% block page_content %}
 
-<!-- <div class="container">
-  <div class="jumbotron">
-    <h1>Welcome to my web space!</h1>      
-    <p>Enjoy the cool stuff here . . . </p>
+<div class="container" style="margin-bottom: 0px;">
+  <!-- #A863FF -->
+  <!-- <img src="{{url_for('static', filename='images/name_animated.svg')}}" style="width: 100%; height: auto;"></img><br> -->
+  <img src="{{url_for('static', filename='images/undraw_coding.svg')}}" style="width: 100%; height: auto;"></img><br>
+  <!-- <img src="{{url_for('static', filename='images/music.gif')}}" style="width: 100%; height: 120px;"></img><br> -->
+  <!-- <div class="boxy1">
+    <img data-aos="flip-up" src="{{url_for('static', filename='images/me3.png')}}" style="width: 100%; height: auto; border-radius: 10px;"></img><br>
+  </div> -->
+</div>
+
+<div style="margin-left: 15px ;">
+  <p style="font-weight: bold; margin-bottom: 0px;"><span style="color: blue; font-size: 21px;">fun </span><snap style="color:rgb(98, 41, 173); font-size: 21px;">whoIreallyAm() </snap><snap style="color:rgb(197, 0, 171); font-size: 33px; font-weight:normal"> {</snap></p>
+  <p style="color: rgb(0, 122, 126); font-size: 18px; "><snap style="color: rgb(235, 33, 33); font-size: 21px; margin-left: 45px; ">println(</snap>"Mainframe Professional"<snap style="color: rgb(235, 33, 33); font-size: 21px;">)</snap></p>
+  <p style="color: rgb(0, 122, 126); font-size: 18px; ;"><snap style="color: rgb(235, 33, 33); font-size: 21px; margin-left: 45px;">println(</snap>"Python Developer"<snap style="color: rgb(235, 33, 33); font-size: 21px;">)</snap></p>
+  <p style="color: rgb(0, 122, 126); font-size: 18px; ; margin-bottom: 0px;"><snap style="color: rgb(235, 33, 33); font-size: 21px; margin-left: 45px;">println(</snap>"Rasberry Pi | Arduino | IoT"<snap style="color: rgb(235, 33, 33); font-size: 21px;">)</snap></p>
+  <p style="color:rgb(197, 0, 171); font-size: 33px; margin-bottom: 0px;">}</p>
+  <p style="color:rgb(98, 41, 173); font-size: 21px; font-weight: bold; margin-top: 0px; margin-bottom: 0px;">whoIreallyAm()</p>
+  <p style="color:rgba(114, 114, 119, 0.432); font-size: 18px; font-weight: bold; margin-top: 0px; margin-bottom: 30px;">// Call this function to know {me}</p>
+</div>
+ 
+  <!-- <div class="boxy1">
+    <img data-aos="flip-up" src="{{url_for('static', filename='images/me3.png')}}" style="width: 100%; height: auto; border-radius: 10px;"></img><br>
   </div> -->
 
-<div class="container">
-  <img src="{{url_for('static', filename='images/yellow.JPG')}}" class="img-responsive" alt="Photo is Missing here"  style="width: 100%; height: 100%;"> 
-</div>
-   
+  <!-- <p>def Mohit-Wadhwa()</p>
+  <p>{</p>
+    Mainframe Developer by Profession<br>
+    Python Developer by Heart<br> 
+    Rasberry Pi/Arduino Enthusiast<br>
+    An Internet of Things (IoT) 
+  <p>}</p>
+  <p>Mohit-Wadhwa()</p> -->
+ 
+<!-- <div class="container" data-aos="fade-up">
+  <div class="boxy">
+    <a href="/downloads" target="blank" style="color: rgb(116, 39, 187); font-size: 21px;">Download Profile</a>
+  </div> 
+</div> -->
 
+<!-- <img src="https://media.giphy.com/media/3C5GiCUkah8Gs/giphy.gif" style="width: 180px; height: 200px;"></img> -->
+
+
+<!-- https://media.giphy.com/media/3dgcjVQV6WjonA5g2g/giphy.gif -->
+
+<div data-aos="fade-up" style="background-color: rgb(98, 41, 173); padding-top:10px; padding-bottom:10px;">
+  <img data-aos="fade-up" src="https://media.giphy.com/media/3C5GiCUkah8Gs/giphy.gif" style="width: 120px; height: 150px; margin: auto; display: block;"></img><br>
+  <p data-aos="fade-up" style="color: rgb(255, 255, 255);font-family: 'Shadows Into Light'; font-size: 24px; text-align: center;"
+  >CHECK OUT SOME OF MY COOL STUFF!</p>
+</div>
+ 
+<div class="container" data-aos="fade-up">
+  <!-- <div class="centerApp"> -->
+  <div class="boxy">
+  <h4 data-aos="fade-up" style="font-size: 30px;">Covid Statistics</h4>
+  <img data-aos="fade-up" src="{{url_for('static', filename='images/undraw_corona.svg')}}" style="width: 200px; height: auto;"></img><br>
+  <canvas data-aos="fade-up" id="myChart" width="400" height="400"></canvas>
+  </div>
+</div>
+
+<div class="container" data-aos="fade-up">
+  <div class="boxy">
+    <img data-aos="flip-right" id="myImage" src="{{url_for('static', filename='images/dice_app/dice/dice_3.png')}}" alt="dice image" style="width:100px; height: auto; margin-top: 10px; margin-bottom: 10px;">
+    <button class="btn btn-success" data-aos="fade-up" onclick="myFunction()" style="background-color: rgb(98, 41, 173); font-size: 21px ; margin: auto;">Roll Dice </button>
+  </div>
+</div>
+
+
+<div class="container" data-aos="fade-up" style="text-align: center;">
+<div class="boxy">
+  <img data-aos="fade-up" src="{{url_for('static', filename='images/undraw_gaming_6oy3.svg')}}" style="width: 250px; height: 250px;"></img><br>
+  <a href="/apps"><button class="btn btn-success" data-aos="fade-up" style="background-color: rgb(98, 41, 173);font-size: 21px ;margin: auto;">Check out all apps here!</button></a>
+</div>
+</div>
+
+<div class="container">
+  <div class="boxy" data-aos="fade-up"> 
+    <h4 style="font-size: 24px; font-weight: bold; margin-bottom: 0px;">Have any questions? Contact me!</h4>
+    <p style="font-family: 'Lucida Sans'; font-weight: bold; margin-top: 1px;">________________________________________</p>
+    <form action="/">
+      <div class="row">
+        <div class="col-xs-3"> 
+          <img data-aos="flip-right" id="myImage" src="{{url_for('static', filename='images/phone.svg')}}" alt="phone image" style="width:90%; height: 74px;">
+          <img data-aos="flip-right" id="myImage" src="{{url_for('static', filename='images/email.svg')}}" alt="phone image" style="width:90%; height: 74px;">
+          <img data-aos="flip-right" id="myImage" src="{{url_for('static', filename='images/chat.svg')}}" alt="phone image" style="width:90%; height: 74px;">
+        </div>
+        <div class="col-xs-9">
+          <label for="fname" style="font-size: 18px; text-align: left;">Full Name</label><br>
+          <input class="form_boxy" type="text" id="fname" name="fname"><br><br>
+          <label for="email" style="font-size: 18px;">E-mail Address</label><br>
+          <input class="form_boxy" type="email" id="email" name="email"><br><br>
+          <label for="phone" style="font-size: 18px;">Phone Number</label><br>
+          <input class="form_boxy" type="number" id="phone" name="phone"><br><br>
+      <!-- <label for="message">Message:</label><br>
+      <textarea rows="3" cols="35" name="message" form="usrform"></textarea><br><br> -->
+          <input class="btn btn-success" style="font-size: 18px; background-color: rgb(98, 41, 173)" type="submit" value="Submit">
+        </div>
+    </form>
+  </div>
+</div>
+
+  <script>
+    var labelz = [ 
+                    {% for item in labels %}
+                      "{{ item }}",
+                    {% endfor %}
+                 ]
+                 
+    var dataz = [
+                    {% for item in values %}
+                      "{{ item }}",
+                    {% endfor %}
+	               ]
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labelz,
+        datasets: [{
+            label: "India's Covid Statistics",
+            data: dataz,
+            backgroundColor: 'rgb(98, 41, 173)',
+            borderWidth: 0,
+            bevelWidth: 3,
+            bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+            bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+            shadowOffsetX: 3,
+            shadowOffsetY: 3,
+            shadowBlur: 10,
+            shadowColor: 'rgba(0, 0, 0, 0.5)',
+        }]
+    },
+    options: {
+      tooplips: {
+},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }],
+            bevelWidth: 3,
+            bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+            bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+            shadowOffsetX: 3,
+            shadowOffsetY: 3,
+            shadowBlur: 10,
+            shadowColor: 'rgba(0, 0, 0, 0.5)',
+        }
+    }
+});
+  </script>
 {% endblock %}

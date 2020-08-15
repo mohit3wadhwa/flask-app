@@ -8,7 +8,14 @@
   type="image/x-icon">
 <link rel="icon" href="{{ url_for('static', filename = 'India.ico') }}"
   type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styless.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href='https://fonts.googleapis.com/css?family=Shadows Into Light' rel='stylesheet'>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js'></script>
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"> -->
 {% endblock %}
 
 
@@ -23,22 +30,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><pre><b>S A V A G E  -  I N D I A N</b></pre></a>
-      <!-- <a class="navbar-brand" href="/">
-        <img src="{{url_for('static', filename='/images/hitu_logo_2.png')}}" alt="S A V A G E  -  I N D I A N"> -->
+      <!-- Bungee Shade -->
+        <!-- <a class="navbar-brand" href="/" style="font-family: 'Shadows Into Light' ; color:rgb(57, 0, 90); font-size: 48px; text-shadow: 1px 1px 1px rgb(175, 89, 40);">Savage-Indian</a>
+      <a class="navbar-brand" href="/"><pre><b>S A V A G E  -  I N D I A N</b></pre></a> -->
+      <a class="navbar-brand" href="/">
+        <img src="{{url_for('static', filename='images/name_animated.svg')}}" style="width: 100%; height: auto;"></img></a>
     </div>
     <div class="navbar-collapse collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav"  style="padding-top: 50px;">
         {% if not session['name'] %}
-          <li><a href="/">HOME</a></li>
-          <li><a href="/apps">COOL APPS</a></li>
-          <li><a href="/login">LOGIN</a></li>
-          <li><a href="/signup">SIGN UP</a></li>
+          <li><a href="/">      <span style="font-family: 'Shadows Into Light'; font-size: 24px; color: rgb(0, 35, 150);">Home</span></a></li>
+          <li><a href="/apps">  <span style="font-family: 'Shadows Into Light'; font-size: 24px; color: rgb(0, 35, 150);">Cool Apps</span></a></li>
+          <li><a href="/login"> <span style="font-family: 'Shadows Into Light'; font-size: 24px; color: rgb(0, 35, 150);">Login</span></a></li>
+          <li><a href="/signup"><span style="font-family: 'Shadows Into Light'; font-size: 24px; color: rgb(0, 35, 150);">Sign up</span></a></li>
         {% else %}
-          <li><a href="/">HOME</a></li>
-          <li><a href="/apps">COOL APPS</a></li>
-          <li><a href="#"> {{ user_profile|upper }}</a></li>
-          <li><a href="/signout">SIGN OUT</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/apps">Cool Apps</a></li>
+          <li><a href="#"> {{ user_profile }}</a></li>
+          <li><a href="/signout">Sign out</a></li>
         {% endif %}
       </ul>
     </div>
@@ -55,37 +64,43 @@
     {{ message }}
   </div>
   {% endfor %}
-  {% block page_content %}{% endblock %}
 </div>
+  {% block page_content %}
+  {% endblock %}
 
 {% block footer %}
-<div class="footer">
-  <br>
-  <div class="text-center" >
-    <p><b>Copyright &copy; M O H I T &nbsp; W A D H W A</b></p>
+<footer class="container-fluid bg-4 text-center">
+  <div class="container" style="text-align: center;">
+    <br><img data-aos="fade-up" src="{{url_for('static', filename='images/undraw_mic_drop.svg')}}" style="width: 250px; height: 250px;"></img>
+  </div>
+
+  <div class="text-center">
+    <!-- <p style="color: rgb(98, 41, 173);">______________________________________________________</p> -->
+    <p>Copyright &copy; Mohit Wadhwa Inc.</p>
     <div class="btn-group btn-group-justified" role="group">
       <a href="https://www.linkedin.com/in/mohit-wadhwa-25a88a18/">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Linkedin-icon.png')}}" alt="linkedin">
+        <img src="{{url_for('static', filename='/logos/icons8-linkedin.svg')}}" alt="linkedin">
       </a>
-      &nbsp;
+      
       <a href="https://github.com/mohit3wadhwa">
-        <img src="{{url_for('static', filename='/images/Programming-Github-icon.png')}}" alt="github">
+        <img src="{{url_for('static', filename='/logos/icons8-github.svg')}}" alt="github">
       </a>
-      &nbsp;
+      
       <a href="https://www.facebook.com/mohit3wadhwa">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Facebook-icon.png')}}" alt="facebook">
+        <img src="{{url_for('static', filename='/logos/icons8-facebook.svg')}}" alt="facebook">
       </a>
-      &nbsp;
+      
       <a href="https://www.twitter.com/wadhwa3mohit?s=09">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Twitter-icon.png')}}" alt="twitter">
+        <img src="{{url_for('static', filename='/logos/icons8-twitter.svg')}}" alt="twitter">
       </a>
-      &nbsp;
+      
       <a href="https://www.youtube.com/channel/UChBFRfaHi6F16FBjA2bnC3A?view_as=subscriber">
-        <img src="{{url_for('static', filename='/images/Social-Networks-Youtube-icon.png')}}" alt="youtube">
+        <img src="{{url_for('static', filename='/logos/icons8-youtube.svg')}}" alt="youtube">
       </a>
     </div>
+    <br>
   </div>
-<br>
+  </footer>
 {% endblock %}
 {% endblock %}
 
@@ -96,4 +111,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 {% endblock %}

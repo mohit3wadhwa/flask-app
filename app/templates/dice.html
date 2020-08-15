@@ -1,22 +1,17 @@
 {% extends "base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
 {% block page_content %}
-<div class="page-header">
-  {{ wtf.quick_form(form) }}
+
+<div class="container">
+  <div class="card" style="width:100%">
+    <div class="polaroid">
+    <img class="card-img-top" id="myImage" onclick="myFunction()" src="{{url_for('static', filename='images/dice_app/dq.png')}}" alt="Card image cap" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Touch to Roll</h4>
+    </div>
+  </div>
+  </div>
 </div>
-      {% if dice == '6' %}
-        <img src="{{url_for('static', filename='/images/dice_app/dice6.JPG')}}" class="img-responsive" alt="{{ dice }}"  width="100" height="100">
-      {% elif dice == '5' %}
-        <img src="{{url_for('static', filename='/images/dice_app/dice5.JPG')}}" class="img-responsive" alt="{{ dice }}"  width="100" height="100">
-      {% elif dice == '4' %}
-        <img src="{{url_for('static', filename='/images/dice_app/dice4.JPG')}}" class="img-responsive" alt="{{ dice }}"  width="100" height="100">
-      {% elif dice == '3' %}
-        <img src="{{url_for('static', filename='/images/dice_app/dice3.JPG')}}" class="img-responsive" alt="{{ dice }}"  width="100" height="100">
-      {% elif dice == '2' %}
-        <img src="{{url_for('static', filename='/images/dice_app/dice2.JPG')}}" class="img-responsive" alt="{{ dice }}"  width="100" height="100">
-      {% elif dice == '1' %}
-        <img src="{{url_for('static', filename='/images/dice_app/dice1.JPG')}}" class="img-responsive" alt="{{ dice }}"  width="100" height="100">
-      {% endif %}
+
 <br>
 <div class="container">              
   <ul class="pager">

@@ -44,7 +44,7 @@ class NameFormDice(FlaskForm):
     submit = SubmitField('Roll the Dice!')
     
 class NameFormTambola(FlaskForm):
-    submit = SubmitField('Trigger a Number')
+    submit = SubmitField('Fetch a Number')
 
 class NameFormZones(FlaskForm):
     states = SelectField('Select State', validators=[DataRequired()], option_widget=None)
