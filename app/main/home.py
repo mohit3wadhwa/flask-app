@@ -64,7 +64,7 @@ def index():
 
     
     #bar_labels, bar_values = get_covid_stat()
-    bar_lables, bar_values = [], []
+    bar_labels, bar_values = [], []
     
     form = NameFormLogin()
     if form.validate_on_submit():
