@@ -63,7 +63,8 @@ def index():
     #     return render_template('index.html')
 
     
-    bar_labels, bar_values = get_covid_stat()
+    #bar_labels, bar_values = get_covid_stat()
+    bar_lables, bar_values = [], []
     
     form = NameFormLogin()
     if form.validate_on_submit():
