@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#comment add my hardik
 import os
 from app import create_app, db
 from app.models import User
